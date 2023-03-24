@@ -1,0 +1,85 @@
+body {
+    background: #020103; 
+    overflow: hidden;
+}
+  
+canvas {
+    opacity: 0.5;
+}
+
+.business-card{
+    /* margin:0; */
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    padding: 4rem;
+    box-shadow: 0 0 7rem rgba(204, 53, 204, 0.6);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);;
+}
+
+.business-card img{
+    width:15rem;
+}
+
+.business-card .photo-card img{
+    height: 15rem;
+    border-radius: 50%;
+    border: 5px solid rgba(177, 89, 180, 0.6);
+    margin-top: 1rem;
+}
+
+.business-card h1{
+    font-family: 'Ink Free', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 1rem 0 1rem 0;
+}
+
+.business-card h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 1rem 0 1rem 0;
+    font-weight: lighter;
+}
+
+.business-card hr{
+    border: 1px solid rgba(0,0,0,0.5);
+    border-top: 0;
+    margin-bottom: 0;
+}
+
+.business-card p{
+    font-family: 'Nunito', sans-serif;
+    width: 20rem;
+}
+
+.social-media{
+    width:100%;
+    list-style: none;
+    display: flex;
+    justify-content:  space-evenly;
+    padding: 0;
+}
+
+.social-media i{
+    font-size: 2rem;
+    padding: 0;
+}
+
+.fa-facebook-square{
+    color: #3b5999;
+}
+
+.fa-google{
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+  

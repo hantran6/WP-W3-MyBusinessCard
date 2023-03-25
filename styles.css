@@ -1,23 +1,22 @@
 body {
     background: #020103; 
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
   
 canvas {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .business-card{
-    /* margin:0; */
     position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(1px);
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
-    padding: 4rem;
-    box-shadow: 0 0 7rem rgba(204, 53, 204, 0.6);
+    padding: 3rem 5rem 2rem;
+    box-shadow: 0 0 8rem rgb(231, 59, 231);
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.4);;
 }
@@ -26,17 +25,60 @@ canvas {
     width:15rem;
 }
 
-.business-card .photo-card img{
-    height: 15rem;
+.ava-box{
+    margin: 2rem auto;
+    position: relative;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 5px solid rgba(177, 89, 180, 0.6);
-    margin-top: 1rem;
+    background: url(./img/han-ava.jpg) no-repeat;
+    background-size: cover;
+}
+
+.glow::before, 
+.glow::after{
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(
+        -45deg,
+        #D391FA,
+        #C364FA,
+        #ff00ff,
+        #ff0099,
+        #5B00D7,
+        #3E00B3
+        );
+    background-size: 400%;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    z-index: -1;
+    animation: change 40s linear infinite;
+}  
+@keyframes change {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 800% 0;
+    }
+    100%{
+        background-position: 0 0;
+    } 
+} 
+
+.glow::after{
+    filter: blur(20px);
+    opacity: 0.5;
 }
 
 .business-card h1{
-    font-family: 'Ink Free', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: lighter;
+    text-transform: uppercase;
     margin: 1rem 0 1rem 0;
 }
 
@@ -55,7 +97,7 @@ canvas {
 
 .business-card p{
     font-family: 'Nunito', sans-serif;
-    width: 20rem;
+    width: 25rem;
 }
 
 .social-media{
